@@ -1,0 +1,6 @@
+# compiled binaries
+*.bin
+*.out
+*.exe
+# CPH test-case data
+.cph/
