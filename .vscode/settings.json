@@ -1,5 +1,6 @@
 {
     "cph.language.cpp.Args": "-std=c++17 -O2 -Wall -g -fsanitize=address,undefined",
     "cph.general.defaultLanguage": "cpp",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "task.allowAutomaticTasks": "on"
 }
