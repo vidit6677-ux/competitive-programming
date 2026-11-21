@@ -5,7 +5,12 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    
+    int a,b,c;
+    cin>>a>>b>>c;
+
+    if(a>b) cout<<"First\n";
+    else if(a==b && c%2!=0) cout<<"First\n";
+    else cout<<"Second\n";
 }
 
 int main() {
