@@ -13,6 +13,13 @@ void solve() {
     int s,m;
     for(int i=0;i<n;i++){
         s+=a[i];
+     
+    }
+    
+
+
+      for(int i=0;i<n;i++){
+       
         m*=a[i];
     }
 }
