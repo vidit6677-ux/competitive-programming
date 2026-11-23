@@ -10,7 +10,7 @@ void solve() {
     vector<int> a(n);
     for(auto &v:a) cin>>v;
 
-    int s=0,m=1;
+    int s=0,m=0;
     for(int i=0;i<n;i++){
         s+=a[i];
      
@@ -20,13 +20,18 @@ void solve() {
 
       for(int i=0;i<n;i++){
        
-        m*=a[i];
+       if(a[i]==-1) m++;
     }
-
-    if(s<0 && m<0) cout<<s+1<<"\n";
-    else if(s<0 && m>0) cout<<s<<"\n";
-    else if(s>0 && m<0) cout<<"1\n";
-    else cout<<0<<"\n";
+    int c=0;
+   while(s<0){
+    c++;
+    s+=2;
+    m--;
+   }
+   
+   if(m%2==0) cout<<c<<'\n';
+   else  cout<<c+1<<'\n';
+   
 }
 
 int main() {

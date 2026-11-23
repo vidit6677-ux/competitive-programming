@@ -10,19 +10,11 @@ void solve() {
     vector<int> a(n);
     for(auto &v:a) cin>>v;
 
-ll p = accumulate(a.begin(), a.end(), 1LL, multiplies<ll>());
-int sum=1;
-int c=0;
-
-    for(int i=0;i<n;i++){
-        sum=sum*a[i];
-        p=p-a[i];
-        if(sum==p) c=i;
-       
-        
+    for(int i=1;i<n;i++){
+        a[0]^=a[i];
     }
-     if(c!=0) cout<<c<<"\n";
-        else cout<<"-1\n";
+    if(n%2==0 && a[0]!=0) cout<<"-1\n";
+    else cout<<a[0]<<'\n';
 }
 
 int main() {
